@@ -1,0 +1,23 @@
+{
+	"name": "ReadEasy",
+	"version": "1.0",
+	"manifest_version": 2,
+	"description": "An Extension that removes the distractions from the webpage and helps you to focus on reading the main post or article.",
+
+	"icons": {
+		"128": "images/ReadEasy.png"
+	},
+
+	"browser_action":{
+		"default_title": "Click here to remove distractions",
+		"default_popup": "popup.html"
+	},
+  	
+  	"content_scripts": [
+    	{
+      		"matches": ["https://*/*", "http://*/*"],
+      		"js": ["content.js"]
+    	}
+  	],
+	 "permissions": ["activeTab"]
+}
